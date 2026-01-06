@@ -1,12 +1,12 @@
 {
-  "sample-role1": {
+  "cards-user-access-role": {
       "type": "role",
       "src": {
         "from": "./demo/src",
         "content": "role.json"
           }
         },
-  "card-sample": {
+  "users-card": {
       "type": "card",
       "src": {
         "from": "./demo/src",

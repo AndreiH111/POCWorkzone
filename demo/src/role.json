@@ -1,0 +1,15 @@
+{
+  "_version": "3.2.0",
+  "identification": {
+    "id": "ns.cp_erp_ns.mycontentpackage.sm",
+    "title": "CARDSContentPackageRole",
+    "entityType": "role"
+  },
+  "payload": {
+    "apps": [
+      {
+        "id": "ns.users-card.app"
+      }
+    ]
+  }
+}
