@@ -1,0 +1,19 @@
+{
+  "sample-role1": {
+      "type": "role",
+      "src": {
+        "from": "./demo/src",
+        "content": "role.json"
+          }
+        },
+  "card-sample": {
+      "type": "card",
+      "src": {
+        "from": "./demo/src",
+        "path": "./",
+        "build": "",
+        "package": "",
+        "manifest": "src/manifest.json"
+        }
+  }
+}

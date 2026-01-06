@@ -1,0 +1,51 @@
+{
+	"sap.package": {
+		"id": "ns.cp_erp",
+		"packageVersion": {
+			"version": "1.0.0",
+			"upgradeNotification": "all"
+		},
+		"i18n": "i18n/i18n.properties",
+		"icon": "sap-icon://accept",
+    	"title": "{{PACKAGE_TITLE}}",
+        "subTitle": "{{PACKAGE_SUBTITLE}}",
+        "shortTitle": "{{PACKAGE_SHORTTITLE}}",
+        "info": "{{PACKAGE_INFO}}",
+        "description": "{{PACKAGE_DESCRIPTION}}",
+		"tags": {
+			"keywords": [
+			]
+        },
+        "vendor": {
+            "id": "",
+            "name": "",
+            "url": ""
+        },
+		"products": "",
+		"categories": "",
+		"scope": "external",
+		"license": {
+			"text": "",
+			"url": ""
+		},
+		"homepage": {
+			"text": "",
+			"url": ""
+		},
+		"support": {
+			"url": ""
+		},
+		"contents": [
+			"__BUILD__"
+		],
+		"documentation": {
+			"url": ""
+		},
+		"consumption": [],
+		"dependencies": {
+			"products": [],
+			"services": []
+		},
+		"destinations": []
+	}
+}
