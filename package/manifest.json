@@ -2,7 +2,7 @@
 	"sap.package": {
 		"id": "ns.cp_erp_userslist",
 		"packageVersion": {
-			"version": "1.0.1",
+			"version": "1.0.2",
 			"upgradeNotification": "all"
 		},
 		"i18n": "i18n/i18n.properties",
@@ -65,8 +65,8 @@
 			{
 				"_version": "3.2.0",
 				"identification": {
-					"id": "ns.cp_erp_ns.mycontentpackage.sm",
-					"title": "CARDSContentPackageRole",
+					"id": "ns.cp_erp_userslist.sm",
+					"title": "Users List Content Package Role",
 					"entityType": "role"
 				},
 				"payload": {
