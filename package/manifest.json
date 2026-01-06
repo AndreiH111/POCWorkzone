@@ -1,0 +1,186 @@
+{
+	"sap.package": {
+		"id": "ns.cp_erp",
+		"packageVersion": {
+			"version": "1.0.0",
+			"upgradeNotification": "all"
+		},
+		"i18n": "i18n/i18n.properties",
+		"icon": "sap-icon://accept",
+		"title": "{{PACKAGE_TITLE}}",
+		"subTitle": "{{PACKAGE_SUBTITLE}}",
+		"shortTitle": "{{PACKAGE_SHORTTITLE}}",
+		"info": "{{PACKAGE_INFO}}",
+		"description": "{{PACKAGE_DESCRIPTION}}",
+		"tags": {
+			"keywords": []
+		},
+		"vendor": {
+			"id": "",
+			"name": "",
+			"url": ""
+		},
+		"products": "",
+		"categories": "",
+		"scope": "external",
+		"license": {
+			"text": "",
+			"url": ""
+		},
+		"homepage": {
+			"text": "",
+			"url": ""
+		},
+		"support": {
+			"url": ""
+		},
+		"contents": [
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "cpkg-project-template",
+					"sap.artifact": {
+						"id": "ns.users_list_card",
+						"type": "card",
+						"title": "Users by Category Card",
+						"subTitle": "UI5 Integration Card of Type List",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/users-card"
+			}
+		],
+		"documentation": {
+			"url": ""
+		},
+		"consumption": [],
+		"dependencies": {
+			"products": [],
+			"services": []
+		},
+		"destinations": [],
+		"cdmEntities": [
+			{
+				"_version": "3.2.0",
+				"identification": {
+					"id": "ns.cp_erp_ns.mycontentpackage.sm",
+					"title": "CARDSContentPackageRole",
+					"entityType": "role"
+				},
+				"payload": {
+					"apps": [
+						{
+							"id": "ns.users-card.app"
+						}
+					]
+				},
+				"texts": [
+					{
+						"locale": "",
+						"textDictionary": {}
+					},
+					{
+						"locale": "en",
+						"textDictionary": {}
+					}
+				]
+			},
+			{
+				"_version": "3.2.0",
+				"identification": {
+					"id": "ns.users_list_card.app",
+					"title": "Users by Category Card",
+					"entityType": "businessapp",
+					"description": "{{description}}"
+				},
+				"payload": {
+					"visualizations": {
+						"ns.users_list_card.viz": {
+							"vizType": "sap.card",
+							"vizConfig": {
+								"_version": "1.14.0",
+								"sap.app": {
+									"id": "ns.users_list_card",
+									"type": "card",
+									"title": "Users by Category Card",
+									"subTitle": "UI5 Integration Card of Type List",
+									"applicationVersion": {
+										"version": "1.0.0"
+									}
+								},
+								"sap.ui": {
+									"technology": "UI5",
+									"deviceTypes": {
+										"desktop": true,
+										"phone": true,
+										"tablet": true
+									},
+									"icons": {
+										"icon": "sap-icon://list"
+									}
+								},
+								"sap.card": {
+									"type": "List",
+									"header": {
+										"title": "List Card with Users",
+										"icon": {
+											"src": "sap-icon://account"
+										},
+										"status": {
+											"text": "5 of 20"
+										}
+									},
+									"content": {
+										"data": {
+											"path": "/users"
+										},
+										"item": {
+											"title": "{name}",
+											"description": "{email}",
+											"highlight": "Success",
+											"info": {
+												"value": "{role}"
+											}
+										},
+										"maxItems": 5
+									},
+									"configuration": {
+										"destinations": {
+											"key": {
+												"name": "AKH_CARDS2"
+											}
+										}
+									},
+									"data": {
+										"request": {
+											"url": "{{destinations.key}}/api/noAuth"
+										},
+										"path": "/"
+									}
+								},
+								"sap.platform.mobilecards": {
+									"compatible": false
+								}
+							},
+							"vizResources": {
+								"artifactId": "ns.users_list_card"
+							}
+						}
+					}
+				},
+				"texts": [
+					{
+						"locale": "",
+						"textDictionary": {}
+					},
+					{
+						"locale": "en",
+						"textDictionary": {}
+					}
+				]
+			}
+		]
+	}
+}

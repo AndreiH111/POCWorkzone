@@ -1,6 +1,6 @@
 {
 	"sap.package": {
-		"id": "ns.cp_erp",
+		"id": "ns.cp_erp_userslist",
 		"packageVersion": {
 			"version": "1.0.0",
 			"upgradeNotification": "all"

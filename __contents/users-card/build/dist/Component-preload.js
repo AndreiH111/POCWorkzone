@@ -1,0 +1,7 @@
+//@ui5-bundle ns/users_list_card/Component-preload.js
+sap.ui.require.preload({
+	"ns/users_list_card/i18n/i18n.properties":'PACKAGE_TITLE=List of Users\nPACKAGE_SUBTITLE=Package Subtitle\nPACKAGE_SHORTTITLE=Package Shorttitle\nPACKAGE_INFO=Package Info\nPACKAGE_DESCRIPTION=POC for List Card\nPACKAGE_KEYWORD1=Keyword 1\nPACKAGE_KEYWORD2=Keyword 2\n\n\n\n',
+	"ns/users_list_card/i18n/i18n_en.properties":'PACKAGE_TITLE=List of Users\nPACKAGE_SUBTITLE=Package Subtitle\nPACKAGE_SHORTTITLE=Package Shorttitle\nPACKAGE_INFO=Package Info\nPACKAGE_DESCRIPTION=POC for List Card\nPACKAGE_KEYWORD1=Keyword 1\nPACKAGE_KEYWORD2=Keyword 2\n',
+	"ns/users_list_card/manifest.json":'{"_version":"1.14.0","sap.app":{"id":"ns.users_list_card","type":"card","title":"Users by Category Card","subTitle":"UI5 Integration Card of Type List","applicationVersion":{"version":"1.0.0"}},"sap.ui":{"technology":"UI5","deviceTypes":{"desktop":true,"phone":true,"tablet":true},"icons":{"icon":"sap-icon://list"}},"sap.card":{"type":"List","header":{"title":"List Card with Users","icon":{"src":"sap-icon://account"},"status":{"text":"5 of 20"}},"content":{"data":{"path":"/users"},"item":{"title":"{name}","description":"{email}","highlight":"Success","info":{"value":"{role}"}},"maxItems":5},"configuration":{"destinations":{"key":{"name":"AKH_CARDS2"}}},"data":{"request":{"url":"{{destinations.key}}/api/noAuth"},"path":"/"}},"sap.platform.mobilecards":{"compatible":false}}'
+});
+//# sourceMappingURL=Component-preload.js.map
