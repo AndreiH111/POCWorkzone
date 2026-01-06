@@ -8,7 +8,7 @@
   "payload": {
     "apps": [
       {
-        "id": "ns.users-card.app"
+        "id": "ns.users_list_card.app"
       }
     ]
   }

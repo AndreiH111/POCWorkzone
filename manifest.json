@@ -2,7 +2,7 @@
 	"sap.package": {
 		"id": "ns.cp_erp_userslist",
 		"packageVersion": {
-			"version": "1.0.0",
+			"version": "1.0.1",
 			"upgradeNotification": "all"
 		},
 		"i18n": "i18n/i18n.properties",
