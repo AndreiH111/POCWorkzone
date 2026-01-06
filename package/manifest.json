@@ -2,7 +2,7 @@
 	"sap.package": {
 		"id": "ns.cp_erp_userslist",
 		"packageVersion": {
-			"version": "1.0.2",
+			"version": "1.0.4",
 			"upgradeNotification": "all"
 		},
 		"i18n": "i18n/i18n.properties",
@@ -50,6 +50,22 @@
 					}
 				},
 				"baseURL": "artifacts/users-card"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "cpkg-project-template",
+					"sap.artifact": {
+						"id": "ns.users_timeline_card",
+						"type": "card",
+						"title": "User Action Timeline Card",
+						"subTitle": "UI5 Integration Card of Type Timeline",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/timeline-card"
 			}
 		],
 		"documentation": {
@@ -73,6 +89,9 @@
 					"apps": [
 						{
 							"id": "ns.users_list_card.app"
+						},
+						{
+							"id": "ns.users_timeline_card.app"
 						}
 					]
 				},
@@ -166,6 +185,123 @@
 							},
 							"vizResources": {
 								"artifactId": "ns.users_list_card"
+							}
+						}
+					}
+				},
+				"texts": [
+					{
+						"locale": "",
+						"textDictionary": {}
+					},
+					{
+						"locale": "en",
+						"textDictionary": {}
+					}
+				]
+			},
+			{
+				"_version": "3.2.0",
+				"identification": {
+					"id": "ns.users_timeline_card.app",
+					"title": "User Action Timeline Card",
+					"entityType": "businessapp",
+					"description": "{{description}}"
+				},
+				"payload": {
+					"visualizations": {
+						"ns.users_timeline_card.viz": {
+							"vizType": "sap.card",
+							"vizConfig": {
+								"_version": "1.14.0",
+								"sap.app": {
+									"id": "ns.users_timeline_card",
+									"type": "card",
+									"title": "User Action Timeline Card",
+									"subTitle": "UI5 Integration Card of Type Timeline",
+									"applicationVersion": {
+										"version": "1.0.0"
+									}
+								},
+								"sap.ui": {
+									"technology": "UI5",
+									"deviceTypes": {
+										"desktop": true,
+										"phone": true,
+										"tablet": true
+									},
+									"icons": {
+										"icon": "sap-icon://list"
+									}
+								},
+								"sap.card": {
+									"type": "Timeline",
+									"header": {
+										"title": "User Actions Timeline",
+										"icon": {
+											"src": "sap-icon://account"
+										}
+									},
+									"content": {
+										"data": {
+											"json": [
+												{
+													"Title": "Weekly sync: Marketplace / Design Stream",
+													"Description": "MRR WDF18 C3.2(GLASSBOX)",
+													"Icon": "sap-icon://appointment-2",
+													"Time": "2021-10-25T10:00:00.000Z",
+													"Url": "/activity1"
+												},
+												{
+													"Title": "Video Conference for FLP@SF, S4,Hybris",
+													"Icon": "sap-icon://my-view",
+													"Time": "2021-10-25T14:00:00.000Z",
+													"Url": "/activity2"
+												},
+												{
+													"Title": "Call 'Project Nimbus'",
+													"Icon": "sap-icon://outgoing-call",
+													"Time": "2021-10-25T16:00:00.000Z",
+													"Url": "/activity3"
+												}
+											]
+										},
+										"item": {
+											"dateTime": {
+												"value": "{Time}"
+											},
+											"description": {
+												"value": "{Description}"
+											},
+											"title": {
+												"value": "{Title}"
+											},
+											"icon": {
+												"src": "{Icon}"
+											}
+										},
+										"maxItems": 5
+									},
+									"configuration": {
+										"destinations": {
+											"key": {
+												"name": "AKH_CARDS2"
+											}
+										}
+									},
+									"data": {
+										"request": {
+											"url": "{{destinations.key}}/api/noAuth"
+										},
+										"path": "/"
+									}
+								},
+								"sap.platform.mobilecards": {
+									"compatible": false
+								}
+							},
+							"vizResources": {
+								"artifactId": "ns.users_timeline_card"
 							}
 						}
 					}

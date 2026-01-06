@@ -9,6 +9,9 @@
     "apps": [
       {
         "id": "ns.users_list_card.app"
+      },
+        {
+        "id": "ns.users_timeline_card.app"
       }
     ]
   }

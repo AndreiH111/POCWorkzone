@@ -15,5 +15,15 @@
         "package": "",
         "manifest": "src/manifest.json"
         }
-  }
+      },
+  "timeline-card": {
+      "type": "card",
+      "src": {
+        "from": "./timelinecard/src",
+        "path": "./",
+        "build": "",
+        "package": "",
+        "manifest": "src/manifest.json"
+        }
+      }
 }
