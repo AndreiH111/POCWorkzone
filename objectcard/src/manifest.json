@@ -1,0 +1,165 @@
+{
+    "_version": "1.14.0",
+    "sap.app": {
+        "id": "ns.users_object_card",
+        "type": "card",
+        "title": "User Profile Object Card",
+        "subTitle": "UI5 Integration Card of Type Object",
+        "applicationVersion": {
+            "version": "1.0.0"
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        },
+        "icons": {
+            "icon": "sap-icon://list"
+        }
+    },
+    "sap.card": {
+        "type": "Object",
+        "header": {
+            "title": "User Profile",
+            "icon": {
+                "src": "sap-icon://account"
+            }
+        },
+        "content": {
+            "data": {
+                "path": "/userProfile/0"
+            },
+            "groups": [
+                {
+                    "title": "Contact Details",
+                    "items": [
+                        {
+                            "label": "First Name",
+                            "value": "{firstName}"
+                        },
+                        {
+                            "label": "Last Name",
+                            "value": "{lastName}"
+                        },
+                        {
+                            "label": "Phone",
+                            "value": "{phone}",
+                            "tooltip": "{phoneTooltip}",
+                            "actions": [
+                                {
+                                    "type": "Navigation",
+                                    "parameters": {
+                                        "url": "tel:{phone}"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Email",
+                            "value": "{email}",
+                            "tooltip": "{emailTooltip}",
+                            "actions": [
+                                {
+                                    "type": "Navigation",
+                                    "parameters": {
+                                        "url": "mailto:{email}"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Agenda",
+                            "value": "Book a meeting",
+                            "tooltip": "{agendaTooltip}",
+                            "actions": [
+                                {
+                                    "type": "Navigation",
+                                    "enabled": "{= ${agendaUrl}}",
+                                    "parameters": {
+                                        "url": "{agendaUrl}"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Company Details",
+                    "items": [
+                        {
+                            "label": "Company Name",
+                            "value": "{company/name}"
+                        },
+                        {
+                            "label": "Address",
+                            "value": "{company/address}"
+                        },
+                        {
+                            "label": "Email",
+                            "value": "{company/email}",
+                            "tooltip": "{company/emailTooltip}",
+                            "actions": [
+                                {
+                                    "type": "Navigation",
+                                    "parameters": {
+                                        "url": "mailto:{company/email}?subject={company/emailSubject}"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Website",
+                            "value": "{company/website}",
+                            "tooltip": "{company/websiteTooltip}",
+                            "actions": [
+                                {
+                                    "type": "Navigation",
+                                    "parameters": {
+                                        "url": "{company/url}"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Rating",
+                            "type": "RatingIndicator",
+                            "value": 3.5
+                        }
+                    ]
+                },
+                {
+                    "title": "Organizational Details",
+                    "items": [
+                        {
+                            "label": "Direct Manager",
+                            "value": "{manager/firstName} {manager/lastName}",
+                            "icon": {
+                                "src": "{manager/photo}"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "configuration": {
+            "destinations": {
+                "key": {
+                    "name": "AKH_CARDS2"
+                }
+            }
+        },
+        "data": {
+            "request": {
+                "url": "{{destinations.key}}/api/noAuth/userprofile"
+            },
+            "path": "/"
+        },
+        "designtime": "sap/ui/integration/designtime/cardEditor/ConfigurationTemplate"
+    },
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}

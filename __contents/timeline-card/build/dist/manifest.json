@@ -13,7 +13,7 @@
         "technology": "UI5",
         "deviceTypes": {
             "desktop": true,
-            "phone": true,
+            "phone": true,  
             "tablet": true
         },
         "icons": {
