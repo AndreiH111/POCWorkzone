@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "cpkg-project-template",
+	"sap.artifact": {
+		"id": "ns.users_object_card",
+		"type": "card",
+		"title": "User Profile Object Card",
+		"subTitle": "UI5 Integration Card of Type Object",
+		"artifactVersion": {
+			"version": "1.0.0"
+		}
+	}
+}

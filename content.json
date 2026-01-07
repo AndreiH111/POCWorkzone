@@ -25,5 +25,15 @@
         "package": "",
         "manifest": "src/manifest.json"
         }
+      },
+  "object-card": {
+      "type": "card",
+      "src": {
+        "from": "./objectcard/src",
+        "path": "./",
+        "build": "",
+        "package": "",
+        "manifest": "src/manifest.json"
+        }
       }
 }
