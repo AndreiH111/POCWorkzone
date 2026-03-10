@@ -1,0 +1,19 @@
+<mvc:View
+    controllerName="ns.componentcard.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true">
+
+    <VBox alignItems="Center" justifyContent="Center" height="100%">
+        
+        <Text id="helloText" />
+
+        <Input id="userInput" width="260px" placeholder="Enter something..." />
+
+        <HBox>
+            <Button text="Clear" press=".onClearInput" type="Reject" />
+        </HBox>
+
+    </VBox>
+
+</mvc:View>
