@@ -1,6 +1,6 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
-    "ns/componentcard/localService/mockserver"
+    "ns/users_component_card/localService/mockserver"
 ], function (UIComponent, mockserver) {
     "use strict";
 

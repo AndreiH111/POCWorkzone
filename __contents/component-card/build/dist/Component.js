@@ -1,2 +1,2 @@
-sap.ui.define(["sap/ui/core/UIComponent","ns/componentcard/localService/mockserver"],function(n,t){"use strict";const e=n.extend("ns.users_component_card.Component",{metadata:{manifest:"json"},init:function(){t.init();n.prototype.init.apply(this,arguments)}});return e});
+sap.ui.define(["sap/ui/core/UIComponent","ns/users_component_card/localService/mockserver"],function(n,e){"use strict";const t=n.extend("ns.users_component_card.Component",{metadata:{manifest:"json"},init:function(){e.init();n.prototype.init.apply(this,arguments)}});return t});
 //# sourceMappingURL=Component.js.map

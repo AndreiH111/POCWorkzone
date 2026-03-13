@@ -20,7 +20,7 @@ sap.ui.define([
             });
 
             // Resolve path to localService folder
-            const sLocalServicePath = sap.ui.require.toUrl("ns/componentcard/localService");
+            const sLocalServicePath = sap.ui.require.toUrl("ns/users_component_card/localService");
             const sMetadataUrl = `${sLocalServicePath}/metadata.xml`;
             const sMockdataBaseUrl = `${sLocalServicePath}/mockdata`;
 
