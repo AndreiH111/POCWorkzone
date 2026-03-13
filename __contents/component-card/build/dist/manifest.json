@@ -30,7 +30,7 @@
 
   "sap.ui5": {
     "rootView": {
-      "viewName": "ns.componentcard.view.Main",
+      "viewName": "ns.users_component_card.view.Main",
       "type": "XML",
       "async": true,
       "id": "app"
@@ -80,7 +80,7 @@
       }
     },
     "content": {
-      "componentName": "ns.componentcard"
+      "componentName": "ns.users_component_card"
     }
   }
 }

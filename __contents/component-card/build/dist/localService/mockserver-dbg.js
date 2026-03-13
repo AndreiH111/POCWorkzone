@@ -35,7 +35,7 @@ sap.ui.define([
 
             Log.info(
                 `MockServer for ${SERVICE_URL} started`,
-                "ns.componentcard.localService.mockserver"
+                "ns.users_component_card.localService.mockserver"
             );
         }
     };

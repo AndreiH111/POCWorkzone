@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (UIComponent, mockserver) {
     "use strict";
 
-    const Component = UIComponent.extend("ns.componentcard.Component", {
+    const Component = UIComponent.extend("ns.users_component_card.Component", {
         metadata: {
             manifest: "json"
         },

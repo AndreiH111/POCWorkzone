@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (Controller, MessageToast) {
     "use strict";
 
-    return Controller.extend("ns.componentcard.controller.Main", {
+    return Controller.extend("ns.users_component_card.controller.Main", {
         onInit: function () {
 
         },
