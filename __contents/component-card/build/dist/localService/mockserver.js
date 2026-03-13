@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/util/MockServer","sap/base/Log"],function(e,o){"use strict";const t="/mockservice/";const r={init:function(){const r=new e({rootUri:t});e.config({autoRespond:true,autoRespondAfter:500});const c=sap.ui.require.toUrl("ns/componentcard/localService");const n=`${c}/metadata.xml`;const s=`${c}/mockdata`;r.simulate(n,{sMockdataBaseUrl:s,bGenerateMissingMockData:true});r.start();o.info(`MockServer for ${t} started`,"ns.componentcard.localService.mockserver")}};return r});``;
+//# sourceMappingURL=mockserver.js.map

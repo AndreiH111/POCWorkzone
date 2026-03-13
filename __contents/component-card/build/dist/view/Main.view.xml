@@ -1,0 +1,44 @@
+<mvc:View
+    controllerName="ns.componentcard.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true">
+
+    <VBox alignItems="Center" justifyContent="Center" height="100%">
+        
+        <Text id="helloText" />
+
+       <HBox>   
+       <Input
+            id="userInput"
+            width="260px"
+            placeholder="Enter user name..." />
+    
+            <Button
+                text="Add User"
+                press=".onAddUser"
+                type="Emphasized" />
+            <Button
+                text="Clear"
+                press=".onClearInput"
+                type="Reject" />
+        </HBox>
+
+        <!-- Mock OData-backed List -->
+        <List
+            id="userList"
+            width="100%"
+            items="{
+                path: '/Users'
+            }">
+
+            <StandardListItem
+                title="{Name}"
+                description="{Email}"
+                icon="sap-icon://employee"
+                type="Inactive" />
+        </List>
+
+    </VBox>
+
+</mvc:View>

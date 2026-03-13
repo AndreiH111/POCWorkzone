@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/UIComponent","ns/componentcard/localService/mockserver"],function(n,t){"use strict";const e=n.extend("ns.componentcard.Component",{metadata:{manifest:"json"},init:function(){t.init();n.prototype.init.apply(this,arguments)}});return e});
+//# sourceMappingURL=Component.js.map

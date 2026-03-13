@@ -35,5 +35,15 @@
         "package": "",
         "manifest": "src/manifest.json"
         }
+      },
+ "component-card": {
+      "type": "card",
+      "src": {
+        "from": "./componentcard/src",
+        "path": "./",
+        "build": "",
+        "package": "",
+        "manifest": "src/manifest.json"
+        }
       }
 }
