@@ -1,49 +1,86 @@
 {
-	"_version": "1.83.1",
-	"sap.app": {
-		"id": "ns.componentcard",
-		"type": "card",
-		"title": "Sample of a Component Content",
-		"subTitle": "Sample of a Component Content",
-		"applicationVersion": {
-			"version": "1.0.0"
-		},
-		"shortTitle": "A short title for this Card",
-		"info": "Additional information about this Card",
-		"description": "A long description for this Card",
-		"tags": {
-			"keywords": [
-				"Component",
-				"Card",
-				"Sample"
-			]
-		}
-	},
-	"sap.ui": {
-		"technology": "UI5",
-		"icons": {
-			"icon": "sap-icon://technical-object"
-		}
-	},
-	"sap.ui5": {
-		"rootView": {
-			"viewName": "ns.componentcard.view.Main",
-			"type": "XML",
-			"async": true,
-			"id": "app"
-		},
-		"dependencies": {
-			"minUI5Version": "1.38",
-			"libs": {
-				"sap.m": {},
-				"sap.ui.core": {}
-			}
-		}
-	},
-	"sap.card": {
-		"type": "Component",
-		"header": {
-			"title": "Component Card Testing"
-		}
-	}
+  "_version": "1.14.0",
+
+  "sap.app": {
+    "id": "ns.componentcard",
+    "type": "card",
+    "title": "Sample of a Component Content",
+    "subTitle": "Sample of a Component Content",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "shortTitle": "A short title for this Card",
+    "info": "Additional information about this Card",
+    "description": "A long description for this Card",
+    "tags": {
+      "keywords": [
+        "Component",
+        "Card",
+        "Sample"
+      ]
+    }
+  },
+
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "sap-icon://technical-object"
+    }
+  },
+
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "ns.componentcard.view.Main",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+
+    "dependencies": {
+      "minUI5Version": "1.71",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ui.layout": {}
+      }
+    },
+
+    "models": {
+      "": {
+        "type": "sap.ui.model.odata.v2.ODataModel",
+        "settings": {
+          "serviceUrl": "/mockservice/"
+        }
+      }
+    },
+
+    "resources": {
+      "css": []
+    }
+  },
+
+  "sap.card": {
+    "type": "Component",
+    "header": {
+      "title": "Component Card Testing"
+    },
+  "data": {
+    "configuration": {
+      "loadMockServer": true
+    }
+  },
+    "dataSources": {
+      "mainService": {
+        "uri": "/mockservice/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0",
+          "localUri": "localService/metadata.xml"
+        }
+      }
+    },
+    "content": {
+      "componentName": "ns.componentcard"
+    }
+  }
 }

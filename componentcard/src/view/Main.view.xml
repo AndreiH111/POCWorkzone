@@ -8,11 +8,36 @@
         
         <Text id="helloText" />
 
-        <Input id="userInput" width="260px" placeholder="Enter something..." />
-
-        <HBox>
-            <Button text="Clear" press=".onClearInput" type="Reject" />
+       <HBox>   
+       <Input
+            id="userInput"
+            width="260px"
+            placeholder="Enter user name..." />
+    
+            <Button
+                text="Add User"
+                press=".onAddUser"
+                type="Emphasized" />
+            <Button
+                text="Clear"
+                press=".onClearInput"
+                type="Reject" />
         </HBox>
+
+        <!-- Mock OData-backed List -->
+        <List
+            id="userList"
+            width="100%"
+            items="{
+                path: '/Users'
+            }">
+
+            <StandardListItem
+                title="{Name}"
+                description="{Email}"
+                icon="sap-icon://employee"
+                type="Inactive" />
+        </List>
 
     </VBox>
 
