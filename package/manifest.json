@@ -2,7 +2,7 @@
 	"sap.package": {
 		"id": "ns.cp_erp_userslist",
 		"packageVersion": {
-			"version": "1.0.11",
+			"version": "1.0.15",
 			"upgradeNotification": "all"
 		},
 		"i18n": "i18n/i18n.properties",
@@ -574,6 +574,9 @@
 									"technology": "UI5",
 									"icons": {
 										"icon": "sap-icon://technical-object"
+									},
+									"resourceRoots": {
+										"ns.users_component_card": "./"
 									}
 								},
 								"sap.ui5": {

@@ -25,6 +25,9 @@
     "technology": "UI5",
     "icons": {
       "icon": "sap-icon://technical-object"
+    },
+    "resourceRoots": {
+      "ns.users_component_card": "./"
     }
   },
 

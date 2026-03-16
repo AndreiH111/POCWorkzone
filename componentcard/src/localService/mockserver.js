@@ -42,4 +42,3 @@ sap.ui.define([
 
     return MockServerInitializer;
 });
-``
