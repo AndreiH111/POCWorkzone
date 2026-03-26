@@ -1,0 +1,49 @@
+{
+    "sap.app": {
+        "id": "ns.northwind_users_list_card",
+        "type": "card",
+        "title": "Users by Category Card",
+        "applicationVersion": {
+            "version": "1.0.0"
+        }
+    },
+    "sap.card": {
+        "type": "List",
+        "header": {
+            "title": "Customers (Northwind)",
+            "icon": {
+                "src": "sap-icon://account"
+            }
+        },
+        "configuration": {
+            "destinations": {
+                "key": {
+                    "name": "NorthWind"
+                }
+            }
+        },
+        "data": {
+            "request": {
+                "url": "{{destinations.key}}/V4/Northwind/Northwind.svc/Customers",
+                "headers": {
+                    "Accept": "application/json"
+                },
+                "path": "/"
+            }
+        },
+        "content": {
+            "data": {
+                "path": "/value"
+            },
+            "item": {
+                "title": "{CompanyName}",
+                "description": "{ContactName}",
+                "info": {
+                    "value": "{Country}"
+                }
+            },
+            "maxItems": 10
+        },
+        "designtime": "sap/ui/integration/designtime/cardEditor/ConfigurationTemplate"
+    }
+}
